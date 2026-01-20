@@ -1,0 +1,611 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-gradient: linear-gradient(45deg, #fce043, #fb1d8d, #ad51fe);
+  --dark-bg: #0b0223;
+  --nav-bg: #0b0223;
+  --accent-gradient: linear-gradient(90deg, #fce043, #fb1d8d, #ad51fe);
+  --bg: #1A0B2E;
+  --bg2: #230E3D;
+  --bg3: #351165;
+}
+
+body {
+  overflow-x: hidden; 
+  background-color: var(--nav-bg);
+}
+
+
+/* header area css */
+.navbar {
+  background-color: var(--bg);
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+
+/* Nav Links Styling */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #c5c1d1;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+ .menu-icon{
+  display: none;
+ }
+
+/* Gradient Button */
+.btn-subscribe-nav {
+  background: var(--accent-gradient);
+  padding: 13px 25px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease;
+}
+
+.btn-subscribe-nav:hover,.btn-spotify:hover, .btn-subscribe:hover {
+  transform: scale(1.1);
+  
+}
+
+
+/* Hero section css */
+.hero-section {
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: url('assets/hero-bg.png') no-repeat center center;
+  background-size: cover;
+  background-color: var(--dark-bg);
+  font-family: 'Inter', sans-serif;
+  max-width: 1600px;
+  margin: 0 auto;
+  
+}
+
+/* Logo & Badge Positioning */
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.gradient-circle {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: url('assets/hero-circle.png') no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #1a0b4d;
+}
+
+.mic-icon {
+  width: 120px;
+  height: auto;
+}
+
+.badge-new {
+  position: absolute;
+  top: 10px;
+  right: 60px; 
+  background: #00ffaa;
+  color: #000;
+  font-size: 12px; 
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 255, 170, 0.6);
+  animation: glow-pulse 1.5s infinite;
+  
+}
+
+/* Animation css */
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 170, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 170, 0.8), 0 0 30px rgba(0, 255, 170, 0.4);
+    transform: scale(1.05); 
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 255, 170, 0.4);
+    transform: scale(1);
+  }
+}
+
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 10px 0;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  opacity: 0.8;
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-spotify {
+  background: var(--primary-gradient);
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-subscribe {
+  border: 1px solid #00ffaa;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #00ffaa;
+  font-size: 14px;
+}
+
+/* About Podcast section */
+.about-section {
+  background-color: var(--bg); 
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.about-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #c5c1d1;
+  margin-bottom: 15px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.highlight-text {
+  margin-top: 30px !important;
+  color: #c5c1d1;
+}
+
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 50px 0;
+}
+
+/* Stats Grid Styling */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+}
+
+.stat-number {
+  font-size: 42px;
+  font-weight: 800;
+  color: #00ffaa; 
+  margin-bottom: 10px;
+}
+
+.star {
+  font-size: 30px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #c5c1d1;
+  text-transform: uppercase;
+}
+
+/* Grid feature section */
+.features-section {
+  background-color: var(--bg2); 
+  padding: 80px 20px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+
+.audio { grid-area: audio; }
+.mobile { grid-area: mobile; }
+.community { grid-area: community; }
+.interviews { grid-area: interviews; }
+.resources { grid-area: resources; }
+
+.features-grid {
+  display: grid;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 20px;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  grid-template-areas: 
+    "audio mobile mobile"
+    "audio community community"
+    "interviews interviews resources";
+}
+
+
+.feature-card {
+  background: var(--bg3); 
+  padding: 30px;
+  border-radius: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.feature-card p {
+  color: #c5c1d1;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* episode section css */
+.episode-full{
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: var(--bg);
+  padding-bottom: 3rem;
+}
+
+.episodes-section{
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 40px 20px;
+}
+
+.section-heading {
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    margin: 60px 0 40px;
+}
+
+/* Episodes Grid */
+.episodes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;   
+}
+
+.episode-card {
+    background: var(--bg3);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.episode-content {
+    padding: 20px;
+    color: white;
+}
+
+.episode-content h3{
+   font-size: 1.2rem;
+}
+
+.episode-content p{
+   font-size: 0.8rem;
+   padding-top: 1rem;
+}
+
+.duration {
+    color: #00ffaa;
+    font-size: 14px;
+    margin-top: 15px;
+    display: flex;          
+    align-items: center;    
+    gap: 8px;
+}
+
+.duration img {
+    width: 16px;           
+    height: 16px;
+    display: block;
+}
+
+.host-card {
+    background: var(--bg3);
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+}
+
+.host-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ad51fe;
+}
+
+.host-info h3 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.host-info p {
+    color: #c5c1d1;
+    line-height: 1.6;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    border: 2px solid rgba(83, 60, 114, 1); 
+    padding: 10px 13px;
+    border-radius: 50%;
+}
+
+/* Footer area css */
+.main-footer {
+    background-image: url('assets/footer-bg.png'); /
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px; 
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.social-links a {
+    color: #b3a9c9;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+}
+
+.social-links img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.copyright-text {
+    font-size: 0.85rem;
+    color: #6d5b97;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 576px) {
+  
+  .hide-items { display: none; } 
+  .menu-icon{
+    display: inline-block;
+  }
+
+  .hero-section{
+    max-width: 576px;
+    width: 100%;
+  }
+
+
+  .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1rem;
+}
+  .features-grid {
+ 
+  gap: 20px;
+  
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "audio"
+    "mobile"
+    "community"
+    "interviews"
+    "resources";
+    
+}
+
+  .thumbnail-box {
+    width: 100%; 
+    padding: 0; 
+  }
+
+  .thumbnail-box iframe {
+    width: 100% !important; 
+    height: auto;           
+    aspect-ratio: 16 / 9;   
+    border-radius: 15px;    
+  }
+
+  .episode-card {
+    width: 100%;
+  }
+
+  .host-section, .episodes-section {
+    padding: 5px 15px; 
+  }
+
+  .host-card {
+    flex-direction: column;   
+    align-items: center;       
+    text-align: center;        
+    padding: 30px 20px;        
+    gap: 20px;                 
+  }
+
+  .host-info h3 {
+    font-size: 24px;           
+    margin-top: 10px;
+  }
+
+  .host-image img {
+    width: 150px;             
+    height: 150px;
+  }
+
+  .social-icons {
+    justify-content: center;   
+    width: 100%;
+  }
+
+  .host-card {
+    flex-direction: column;    
+    align-items: center;       
+    text-align: center;        
+    padding: 40px 20px;
+    margin: 0 15px;            
+    gap: 20px;
+  }
+
+  .host-image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .social-icons {
+    justify-content: center;   /
+  }
+
+  
+  .main-footer {
+    padding: 60px 20px;
+    background-size: cover;    
+    background-position: center;
+  }
+
+  .social-links {
+    display: grid;             
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    max-width: 300px;          
+  }
+
+  .social-links a {
+    justify-content: flex-start; 
+    font-size: 14px;
+  }
+
+}
